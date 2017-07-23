@@ -215,7 +215,7 @@ public class CallingActivity extends AppCompatActivity {
         }
         else{
             photo = Uri.parse(photoUri);
-            final ImageView imageView = (ImageView) findViewById(R.id.contact_picture);
+            final ImageView imageView = (ImageView) findViewById(R.id.contact_pic);
             imageView.setImageURI(photo);
         }
 
