@@ -72,13 +72,9 @@ public class CallingActivity extends AppCompatActivity {
     private View mRejectCallCircleView;//Endcallbuttonhandler
     private View mRejectHandleCallView;//Endcallbuttonhandler
 
-    private TextView mEndContactView;//Endcallbuttonhandler
-    private TextView mEndNumberView;//Endcallbuttonhandler
-
     private View mEndPictureView;//Endcallbuttonhandler
     private AudioManager audioManager;
     private Uri photo;
-    private int photoId;
     private String name;
     private String number;
     private String photoUri;
@@ -261,7 +257,7 @@ public class CallingActivity extends AppCompatActivity {
                 layoutParam.screenBrightness = 0;
                 layoutParam.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
                 getWindow().setAttributes(layoutParam);
-                
+
 
                 /*
                 // Set everything to invisible
@@ -273,18 +269,13 @@ public class CallingActivity extends AppCompatActivity {
                 mEndPictureView.setVisibility(View.INVISIBLE);
                 */
 
-                //Log.v("MainACt", "mEncCallView = " + mEndCallView.toString());
                 mEndCallView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         activity.finish();
                     }
                 });
-
-
-
             }
-
         });
 
         // WHEN THE REJECT BUTTON IS PRESSED
@@ -293,8 +284,6 @@ public class CallingActivity extends AppCompatActivity {
             public void onClick(View view) {
                 player.stop();
                 v.cancel();
-
-
 
                 //Schedule next activity
                 int repeats = extras.getInt(Constants.EXTRA_KEY_REPEATS);

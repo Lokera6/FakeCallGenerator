@@ -266,7 +266,7 @@ public class ContactsListFragment extends Fragment implements
     }
 
     public interface ContactsListFragmentInterface {
-        // TODO: Update argument type and name
+        // TODO: Pass contact info here instead of thorugh shared prefs
         void onContactClicked(String lookupKey);
     }
 }
