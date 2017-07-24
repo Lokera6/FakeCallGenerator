@@ -44,7 +44,7 @@ public class WidgetConfigurationActivity extends AppCompatActivity implements
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_widget_configuration);
 
             Spinner repeat_spinner = (Spinner) findViewById(R.id.repeat_spinner);
             ArrayAdapter<CharSequence> r_adapter = ArrayAdapter.createFromResource(this,
