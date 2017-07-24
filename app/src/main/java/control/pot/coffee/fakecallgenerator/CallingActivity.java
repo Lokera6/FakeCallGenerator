@@ -63,15 +63,15 @@ public class CallingActivity extends AppCompatActivity {
     private View mRejectView; // For reject button before call is answered or rejected
     private ImageButton mEndCallView; // For end call button after call is answered
     private View mEndCallCircleView;//Endcallbuttonhandler
-    private View mEndHandleCallView;//Endcallbuttonhandler
+    private View mEndHandleCallView;//Endcallhandlebuttonhandler
 
     private ImageButton mAnswerCallView; // For end call button after call is answered
-    private View mAnswerCallCircleView;//Endcallbuttonhandler
-    private View mAnswerHandleCallView;//Endcallbuttonhandler
+    private View mAnswerCallCircleView;//Answercallcirclebuttonhandler
+    private View mAnswerHandleCallView;//Answercallhandlebuttonhandler
 
     private ImageButton mRejectCallView; // For end call button after call is answered
-    private View mRejectCallCircleView;//Endcallbuttonhandler
-    private View mRejectHandleCallView;//Endcallbuttonhandler
+    private View mRejectCallCircleView;//Rejectcallbuttonhandler
+    private View mRejectHandleCallView;//Rejectcallbuttonhandler
 
     private View mEndPictureView;//Endcallbuttonhandler
     private AudioManager audioManager;
@@ -264,16 +264,6 @@ public class CallingActivity extends AppCompatActivity {
                 layoutParam.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
                 getWindow().setAttributes(layoutParam);
 
-                /*
-                // Set everything to invisible
-                mEndCallView.setVisibility(View.INVISIBLE);
-                mEndCallCircleView.setVisibility(View.INVISIBLE);
-                mEndHandleCallView.setVisibility(View.INVISIBLE);
-                mEndContactView.setVisibility(View.INVISIBLE);
-                mEndNumberView.setVisibility(View.INVISIBLE);
-                mEndPictureView.setVisibility(View.INVISIBLE);
-                */
-
                 mEndCallView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -300,13 +290,6 @@ public class CallingActivity extends AppCompatActivity {
                 }
 
                 finish();
-                /*
-                //Goes Back to Home
-                Intent startMain = new Intent(Intent.ACTION_MAIN);
-                startMain.addCategory(Intent.CATEGORY_HOME);
-                //startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(startMain);
-                */
 
             }
         });
