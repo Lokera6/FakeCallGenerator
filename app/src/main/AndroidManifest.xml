@@ -35,7 +35,7 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
-                <action android:name="blahblahblah.com.widgetaction"/>
+                <action android:name="control.pot.coffee.fakecallgenerator.widgetaction"/>
             </intent-filter>
 
             <meta-data
