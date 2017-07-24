@@ -230,7 +230,7 @@ public class CallingActivity extends AppCompatActivity {
         v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         // Start without a delay, Vibrate for 100 milliseconds, Sleep for 1000 milliseconds
-        long[] pattern = {0, 100, 1000};
+        long[] pattern = {0, 1200, 1000};
         v.vibrate(pattern, 0);
 
         //FOR WHEN THE ACCEPT BUTTON IS PRESSED
