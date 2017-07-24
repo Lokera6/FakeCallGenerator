@@ -137,13 +137,13 @@ public class CallingActivity extends AppCompatActivity {
 
     //mutes ALL STREAMS
     public void muteAll(){
-        audioManager.setStreamVolume(audioManager.STREAM_ALARM ,audioManager.ADJUST_TOGGLE_MUTE, 1);
-        audioManager.setStreamVolume(audioManager.STREAM_DTMF ,audioManager.ADJUST_TOGGLE_MUTE, 2);
-        audioManager.setStreamVolume(audioManager.STREAM_MUSIC ,audioManager.ADJUST_TOGGLE_MUTE, 3);
-        audioManager.setStreamVolume(audioManager.STREAM_NOTIFICATION ,audioManager.ADJUST_TOGGLE_MUTE, 4);
-        audioManager.setStreamVolume(audioManager.STREAM_RING ,audioManager.ADJUST_TOGGLE_MUTE, 5);
-        audioManager.setStreamVolume(audioManager.STREAM_SYSTEM ,audioManager.ADJUST_TOGGLE_MUTE, 6);
-        audioManager.setStreamVolume(audioManager.STREAM_VOICE_CALL ,audioManager.ADJUST_TOGGLE_MUTE, 7);
+        audioManager.setStreamVolume(AudioManager.STREAM_ALARM ,        AudioManager.ADJUST_TOGGLE_MUTE, 1);
+        audioManager.setStreamVolume(AudioManager.STREAM_DTMF ,         AudioManager.ADJUST_TOGGLE_MUTE, 2);
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC ,        AudioManager.ADJUST_TOGGLE_MUTE, 3);
+        audioManager.setStreamVolume(AudioManager.STREAM_NOTIFICATION , AudioManager.ADJUST_TOGGLE_MUTE, 4);
+        audioManager.setStreamVolume(AudioManager.STREAM_RING ,         AudioManager.ADJUST_TOGGLE_MUTE, 5);
+        audioManager.setStreamVolume(AudioManager.STREAM_SYSTEM ,       AudioManager.ADJUST_TOGGLE_MUTE, 6);
+        audioManager.setStreamVolume(AudioManager.STREAM_VOICE_CALL ,   AudioManager.ADJUST_TOGGLE_MUTE, 7);
     }
 
 
@@ -166,7 +166,7 @@ public class CallingActivity extends AppCompatActivity {
 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE); // To later play the ringtone
 
-        //muteAll();
+        muteAll();
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
