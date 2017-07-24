@@ -16,7 +16,7 @@ import android.widget.RemoteViews;
 
 public class WidgetProvider extends AppWidgetProvider {
 
-    public static final String WIDGET_ACTION = "blahblahblah.com.widgetaction";
+    public static final String WIDGET_ACTION = "control.pot.coffee.fakecallgenerator.widgetaction";
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         final int count = appWidgetIds.length;
