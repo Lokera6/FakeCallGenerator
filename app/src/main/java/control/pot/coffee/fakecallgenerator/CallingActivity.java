@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -211,7 +212,8 @@ public class CallingActivity extends AppCompatActivity {
         }
         else{
             photo = Uri.parse(photoUri);
-            final ImageView imageView = (ImageView) findViewById(R.id.contact_picture);
+            CardView cardView = (CardView) findViewById(R.id.contact_picture);
+            final ImageView imageView = (ImageView) cardView.findViewById(R.id.contact_pic);
             imageView.setImageURI(photo);
         }
 
@@ -222,8 +224,12 @@ public class CallingActivity extends AppCompatActivity {
         player.start();
 
         //Phone vibrates
+        // Get instance of Vibrator from current Context
         v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(10000000);
+
+        // Start without a delay, Vibrate for 1200 milliseconds, Sleep for 1000 milliseconds
+        long[] pattern = {0, 1200, 500};
+        v.vibrate(pattern, 0);
 
         //FOR WHEN THE ACCEPT BUTTON IS PRESSED
         mAnswerView.setOnClickListener(new View.OnClickListener() {
@@ -237,8 +243,6 @@ public class CallingActivity extends AppCompatActivity {
                 mRejectView.setVisibility(View.INVISIBLE);
 
                 // Change View to look like in call
-
-
                 mAnswerCallView.setVisibility(View.INVISIBLE);
                 mAnswerCallCircleView.setVisibility(View.INVISIBLE);
                 mAnswerHandleCallView.setVisibility(View.INVISIBLE);
@@ -257,7 +261,6 @@ public class CallingActivity extends AppCompatActivity {
                 layoutParam.screenBrightness = 0;
                 layoutParam.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
                 getWindow().setAttributes(layoutParam);
-
 
                 /*
                 // Set everything to invisible
