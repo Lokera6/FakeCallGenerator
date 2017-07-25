@@ -184,7 +184,7 @@ public class CallingActivity extends AppCompatActivity {
             String Enumber = extras.getString(Constants.EXTRA_KEY_NUMBER, null);
             photoUri = extras.getString(Constants.EXTRA_KEY_PHOTO, null);
 
-        Log.v("MainActivity", Ename + " | " + Enumber + " | " + photoUri);
+        Log.v("CallingActivity", Ename + " | " + Enumber + " | " + photoUri);
 
         name = (Ename != null ? Ename : "Mom");
         number = (Enumber != null ? Enumber : "1 (858) 453 5343");
@@ -206,8 +206,6 @@ public class CallingActivity extends AppCompatActivity {
             final ImageView imageView = (ImageView) cardView.findViewById(R.id.contact_pic);
             imageView.setImageURI(photo);
         }
-
-        Log.v("MainActivity", Ename + " | " + Enumber + " | " + photoUri);
 
         // Getting the default ringTone to play
         final MediaPlayer player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);

@@ -42,17 +42,20 @@ public class WidgetProvider extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        Log.v("", "received widget broadcast");
+        Log.v("WidgetProvider", "received widget broadcast");
         if (intent.getAction().equals(WIDGET_ACTION)) {
             SharedPreferences sharedPrefs = context.getSharedPreferences(Constants.PREFS_WIDGET_NAME, 0);
             String id = intent.getExtras().getString(Constants.PREFS_WIDGET_ID);
 
-            String name = sharedPrefs.getString(Constants.PREFS_WIDGET_NAME(id), null);
-            String number = sharedPrefs.getString(Constants.PREFS_WIDGET_NUMBER(id), null);
+            String name     = sharedPrefs.getString(Constants.PREFS_WIDGET_NAME(id), null);
+            String number   = sharedPrefs.getString(Constants.PREFS_WIDGET_NUMBER(id), null);
             String photoStr = sharedPrefs.getString(Constants.PREFS_WIDGET_PHOTO(id), null);
-            int delay = sharedPrefs.getInt(Constants.PREFS_WIDGET_DELAY(id), 0);
-            int interval = sharedPrefs.getInt(Constants.PREFS_WIDGET_INTERVAL(id), 0);
-            int repeat = sharedPrefs.getInt(Constants.PREFS_WIDGET_REPEATS(id), 0);
+            int delay       = sharedPrefs.getInt(Constants.PREFS_WIDGET_DELAY(id), 0);
+            int interval    = sharedPrefs.getInt(Constants.PREFS_WIDGET_INTERVAL(id), 0);
+            int repeat      = sharedPrefs.getInt(Constants.PREFS_WIDGET_REPEATS(id), 0);
+
+            String spc = " | ";
+            Log.v("WidgetProvider", name + spc + number + spc + photoStr + spc + delay + spc + interval + spc + repeat);
 
             CallScheduler CS = new CallScheduler(context, delay, repeat, interval,
                         name, number, photoStr);

@@ -146,7 +146,9 @@ public class WidgetConfigurationActivity extends AppCompatActivity implements
                     AppWidgetManager.EXTRA_APPWIDGET_ID,
                     AppWidgetManager.INVALID_APPWIDGET_ID);
         }
-        Log.v(TAG, "Configure Widget has been called");
+
+        String spc = " | ";
+        Log.v(TAG, name + spc + number + spc + photoStr + spc + delay + spc + interval + spc + repeat);
 
         SharedPreferences sharedPrefs = this.getSharedPreferences(Constants.PREFS_WIDGET_NAME, 0);
         SharedPreferences.Editor editor = sharedPrefs.edit();
