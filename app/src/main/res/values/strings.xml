@@ -22,7 +22,7 @@
 
     <string-array name="delay_array">
         <item>0</item>
-        <item>10</item>
+        <item>5</item>
         <item>30</item>
         <item>180</item>
     </string-array>
@@ -34,7 +34,7 @@
     </string-array>
 
     <string-array name="interval_array">
-        <item>10</item>
+        <item>5</item>
         <item>30</item>
         <item>180</item>
     </string-array>
