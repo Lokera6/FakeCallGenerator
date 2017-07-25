@@ -198,7 +198,9 @@ public class CallingActivity extends AppCompatActivity {
 
         // Set the contact image
         if(photoUri == null){
-
+            CardView cardView = (CardView) findViewById(R.id.contact_picture);
+            final ImageView imageView = (ImageView) cardView.findViewById(R.id.contact_pic);
+            imageView.setImageDrawable(getResources().getDrawable(R.drawable.default_contact));
         }
         else{
             photo = Uri.parse(photoUri);
