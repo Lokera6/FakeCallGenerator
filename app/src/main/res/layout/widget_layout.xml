@@ -14,9 +14,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@android:drawable/sym_action_call"
+        android:background="@drawable/widget"
         android:elevation="14dp"
-        android:text="Call"
+        android:text="FCG"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="16dp"
         android:textStyle="bold" />
