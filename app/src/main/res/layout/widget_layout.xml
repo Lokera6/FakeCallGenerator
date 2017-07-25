@@ -16,7 +16,6 @@
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="@drawable/widget"
         android:elevation="14dp"
-        android:text="FCG"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="16dp"
         android:textStyle="bold" />
