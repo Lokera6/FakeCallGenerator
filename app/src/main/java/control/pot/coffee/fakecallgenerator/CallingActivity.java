@@ -183,7 +183,9 @@ public class CallingActivity extends AppCompatActivity {
             String Ename = extras.getString(Constants.EXTRA_KEY_NAME, null);
             String Enumber = extras.getString(Constants.EXTRA_KEY_NUMBER, null);
             photoUri = extras.getString(Constants.EXTRA_KEY_PHOTO, null);
+
         Log.v("MainActivity", Ename + " | " + Enumber + " | " + photoUri);
+        Log.v("CallingActivity", Ename + " | " + Enumber + " | " + photoUri);
 
 
         name = (Ename != null ? Ename : "Mom");
@@ -198,7 +200,9 @@ public class CallingActivity extends AppCompatActivity {
 
         // Set the contact image
         if(photoUri == null){
-
+            CardView cardView = (CardView) findViewById(R.id.contact_picture);
+            final ImageView imageView = (ImageView) cardView.findViewById(R.id.contact_pic);
+            imageView.setImageDrawable(getResources(R.drawable.default_contact));
         }
         else{
             photo = Uri.parse(photoUri);
@@ -206,8 +210,6 @@ public class CallingActivity extends AppCompatActivity {
             final ImageView imageView = (ImageView) cardView.findViewById(R.id.contact_pic);
             imageView.setImageURI(photo);
         }
-
-        Log.v("MainActivity", Ename + " | " + Enumber + " | " + photoUri);
 
         // Getting the default ringTone to play
         final MediaPlayer player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);

@@ -45,7 +45,7 @@ public class CallScheduler {
         this.photoUri = photoUri;
         am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
-        Log.v(TAG,wait + " | " + repeats + " | " + interval + " | " + name + " | " + number + " | " + photoUri);
+        Log.v(TAG, wait + " | " + repeats + " | " + interval + " | " + name + " | " + number + " | " + photoUri);
     }
 
     //This func should use array instead
