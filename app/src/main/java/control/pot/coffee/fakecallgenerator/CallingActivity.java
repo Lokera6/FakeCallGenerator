@@ -183,8 +183,8 @@ public class CallingActivity extends AppCompatActivity {
             String Ename = extras.getString(Constants.EXTRA_KEY_NAME, null);
             String Enumber = extras.getString(Constants.EXTRA_KEY_NUMBER, null);
             photoUri = extras.getString(Constants.EXTRA_KEY_PHOTO, null);
-
         Log.v("MainActivity", Ename + " | " + Enumber + " | " + photoUri);
+
 
         name = (Ename != null ? Ename : "Mom");
         number = (Enumber != null ? Enumber : "1 (858) 453 5343");
